@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novel "Langit Senja" - BerkasLama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <p><a href="products.html">← Kembali ke Produk</a></p>
+        <div class="card">
+            <div class="thumb"><div class="thumb"><img
+                        src="https://dynamic.zacdn.com/vl0Os3wmqnNsoRoPPuEH5jhWBD4=/filters:quality(70):format(webp)/https://static-id.zacdn.com/p/hamlin-7685-7591842-2.jpg"
+                        alt="Kacamata Frame Retro"></div></div>
+            <h1>Kacamata Frame Retro</h1>
+            <p class="price">Rp 95.000</p>
+            <p class="meta"><strong>Kondisi:</strong> Hampir Baru, frame kokoh, lensa bening.</p>
+            <p>
+                Kacamata frame retro ini memiliki desain klasik yang cocok untuk berbagai gaya, baik kasual maupun semi-formal. Frame ringan namun tetap kuat, nyaman digunakan dalam waktu lama tanpa membuat cepat lelah. Kacamata ini cocok digunakan sebagai kacamata fashion maupun kacamata harian. Kondisi masih sangat baik dan tampilan tetap menarik.
+            </p>
+            <p><strong>Detail fisik:</strong> frame plastik retro, ukuran standar dewasa, warna hitam.</p>
+            <button class="btn btn-success" onclick="buyProduct()">
+                Beli
+            </button>
+
+            <script>
+                function buyProduct() {
+                    if (localStorage.getItem("login") !== "true") {
+                        alert("Silakan login terlebih dahulu.");
+                        window.location.href = "login.html";
+                        return;
+                    }
+
+                    const product = {
+                        name: "Kacamata Frame Retro",
+                        price: 95000,
+                        condition: "Hampir Baru"
+                    };
+
+                    localStorage.setItem("checkoutProduct", JSON.stringify(product));
+                    window.location.href = "checkout.html";
+                }
+            </script>
+        </div>
+        <footer>
+            © BerkasLama2025
+        </footer>
+    </div>
+
+</body>
+
+</html>

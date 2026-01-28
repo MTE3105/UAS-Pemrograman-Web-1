@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novel "Langit Senja" - BerkasLama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <p><a href="products.html">← Kembali ke Produk</a></p>
+        <div class="card">
+            <div class="thumb"><div class="thumb"><img
+                        src="https://i.pinimg.com/736x/54/d0/e5/54d0e517b359d25a993720f50890dbfa.jpg"
+                        alt="Jaket Parasut Outdoor"></div></div>
+            <h1>Jaket Parasut Outdoor</h1>
+            <p class="price">Rp 175.000</p>
+            <p class="meta"><strong>Kondisi:</strong> Hampir Baru, bahan masih tebal dan ringan, resleting berfungsi normal.</p>
+            <p>
+                Jaket parasut outdoor ini cocok digunakan untuk aktivitas luar ruangan seperti perjalanan, riding, atau sekadar pemakaian harian. Bahan parasut ringan namun tetap mampu menahan angin dan percikan air ringan. Jahitan rapi dan tidak ada sobekan, sehingga masih nyaman dan aman digunakan. Jaket ini memiliki desain sederhana dan fungsional, mudah dipadukan dengan berbagai gaya, serta tidak memakan banyak tempat saat dibawa.
+            </p>
+            <p><strong>Detail fisik:</strong> bahan parasut, lengan panjang, resleting depan, ukuran standar dewasa.</p>
+            <button class="btn btn-success" onclick="buyProduct()">
+                Beli
+            </button>
+
+            <script>
+                function buyProduct() {
+                    if (localStorage.getItem("login") !== "true") {
+                        alert("Silakan login terlebih dahulu.");
+                        window.location.href = "login.html";
+                        return;
+                    }
+
+                    const product = {
+                        name: "Jaket Parasut Outdoor",
+                        price: 175000,
+                        condition: "Hampir Baru"
+                    };
+
+                    localStorage.setItem("checkoutProduct", JSON.stringify(product));
+                    window.location.href = "checkout.html";
+                }
+            </script>
+        </div>
+        <footer>
+            © BerkasLama2025
+        </footer>
+    </div>
+
+</body>
+
+</html>

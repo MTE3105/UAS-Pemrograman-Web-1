@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Headphone Sony WH-CH510 - BerkasLama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <p><a href="products.html">← Kembali ke Produk</a></p>
+        <div class="card">
+            <div class="thumb"><img
+                    src="https://www.sony.co.id/image/b789488955522f13ffb4778bd08465c6?fmt=pjpeg&bgcolor=FFFFFF&bgc=FFFFFF&wid=2515&hei=1320"
+                    alt="Headphone Sony WH-CH510"></div>
+            <h1>Headphone Sony WH-CH510</h1>
+            <p class="price">Rp 350.000</p>
+            <p><strong>Kondisi:</strong> Hampir Baru, baterai sehat, pemakaian ringan.</p>
+            <p>
+                Headphone ini sangat ringan dan nyaman, cocok untuk aktivitas harian
+                seperti belajar, bekerja, atau mendengarkan musik santai. Baterai masih
+                bagus dan suara jernih.
+            </p>
+            <button class="btn btn-success" onclick="buyProduct()">
+                Beli
+            </button>
+
+            <script>
+                function buyProduct() {
+                    if (localStorage.getItem("login") !== "true") {
+                        alert("Silakan login terlebih dahulu.");
+                        window.location.href = "login.html";
+                        return;
+                    }
+
+                    const product = {
+                        name: "Headphone Sony WH-CH510",
+                        price: 350000,
+                        condition: "Hampir Baru"
+                    };
+
+                    localStorage.setItem("checkoutProduct", JSON.stringify(product));
+                    window.location.href = "checkout.html";
+                }
+            </script>
+
+        </div>
+        <footer>
+            © BerkasLama2025
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

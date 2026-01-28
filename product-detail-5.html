@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novel "Langit Senja" - BerkasLama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <p><a href="products.html">← Kembali ke Produk</a></p>
+        <div class="card">
+            <div class="thumb"><div class="thumb"><img
+                        src="https://cdn.shopify.com/s/files/1/0672/3806/8470/files/1742994158_18877321.jpg?v=1745294490"
+                        alt="Kamera Mirrorless (Kit Lens)"></div></div>
+            <h1>Kamera Mirrorless (Kit Lens)</h1>
+            <p class="price">Rp 2.150.000</p>
+            <p class="meta"><strong>Kondisi:</strong> Layak Pakai, fungsi normal, terdapat pemakaian wajar.</p>
+            <p>
+                Kamera mirrorless ini cocok bagi pemula hingga pengguna yang ingin belajar fotografi dan videografi. Dilengkapi dengan kit lens bawaan, kamera mampu menghasilkan foto yang tajam dan video yang stabil untuk kebutuhan dokumentasi maupun konten kreatif. Kondisi kamera masih berfungsi dengan baik, semua tombol dan fitur utama berjalan normal. Cocok digunakan untuk perjalanan, acara keluarga, atau pembuatan konten sederhana.
+            </p>
+            <p><strong>Detail fisik:</strong> kamera mirrorless, lensa kit standar, bodi kompak, ringan dibawa.</p>
+            <button class="btn btn-success" onclick="buyProduct()">
+                Beli
+            </button>
+
+            <script>
+                function buyProduct() {
+                    if (localStorage.getItem("login") !== "true") {
+                        alert("Silakan login terlebih dahulu.");
+                        window.location.href = "login.html";
+                        return;
+                    }
+
+                    const product = {
+                        name: "Kamera Mirrorless (Kit Lens)",
+                        price: 2150000,
+                        condition: "Layak Pakai"
+                    };
+
+                    localStorage.setItem("checkoutProduct", JSON.stringify(product));
+                    window.location.href = "checkout.html";
+                }
+            </script>
+        </div>
+        <footer>
+            © BerkasLama2025
+        </footer>
+    </div>
+
+</body>
+
+</html>

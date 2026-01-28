@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tas Kulit Vintage - BerkasLama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <p><a href="products.html">← Kembali ke Produk</a></p>
+        <div class="card">
+            <div class="thumb">
+                <div class="thumb"><img
+                        src="https://b2573403.smushcdn.com/2573403/wp-content/uploads/2020/09/tas-selempang-kulit-pria-warren.jpg?lossy=0&strip=1&webp=0"
+                        alt="Tas Kulit Vintage"></div>
+            </div>
+            <h1>Tas Kulit Vintage</h1>
+            <p class="price">Rp 225.000</p>
+            <p><strong>Kondisi:</strong> Layak Pakai, terdapat gores halus pada permukaan, namun tali masih sangat kuat.
+            </p>
+            <p>
+                Tas kulit bergaya vintage dengan warna coklat tua. Cocok untuk jalan-jalan,
+                bekerja, atau sekadar membawa barang harian. Ukuran tidak terlalu besar,
+                nyaman dibawa, dan memiliki kesan klasik.
+            </p>
+            <button class="btn btn-success" onclick="buyProduct()">
+                Beli
+            </button>
+
+            <script>
+                function buyProduct() {
+                    if (localStorage.getItem("login") !== "true") {
+                        alert("Silakan login terlebih dahulu.");
+                        window.location.href = "login.html";
+                        return;
+                    }
+
+                    const product = {
+                        name: "Tas Kulit Vintage",
+                        price: 225000,
+                        condition: "Layak Pakai"
+                    };
+
+                    localStorage.setItem("checkoutProduct", JSON.stringify(product));
+                    window.location.href = "checkout.html";
+                }
+            </script>
+        </div>
+        <footer>
+            © BerkasLama2025
+        </footer>
+    </div>
+</body>
+
+</html>

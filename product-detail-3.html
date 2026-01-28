@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novel "Langit Senja" - BerkasLama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <p><a href="products.html">← Kembali ke Produk</a></p>
+        <div class="card">
+            <div class="thumb"><div class="thumb"><img
+                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUrmpirxqZau8M8au8S9SD7qzXwOYrDw83YcSRXrwiMy7JnGIq5YLAuW_bPwzJQE9-WFHYMXFljlvy1t6SH5rc_HHtrHxX9REMJIBKmXHcQzDDNDo0f38p1JrcFbSdJc0_ukAzd7yUbe8/s2048/Cover+Upload+-+Langit+Senja.jpg"
+                        alt="Novel Langit Senja"></div></div>
+            <h1>Novel "Langit Senja"</h1>
+            <p class="price">Rp 55.000</p>
+            <p class="meta"><strong>Kondisi:</strong> Layak halaman bersih, sampul sedikit pudar</p>
+            <p>
+                "Langit Senja" adalah novel fiksi ringan tentang perjalanan dan pencarian jati diri.
+                Edisi preloved ini masih rapi, halaman tidak robek, dan cocok untuk koleksi atau bacaan harian.
+                Cocok bagi pembaca yang menyukai cerita hangat dan karakter yang mudah diingat.
+            </p>
+            <p><strong>Detail fisik:</strong> paperback, 280 halaman, ukuran 13.5 x 20 cm.</p>
+            <button class="btn btn-success" onclick="buyProduct()">
+                Beli
+            </button>
+
+            <script>
+                function buyProduct() {
+                    if (localStorage.getItem("login") !== "true") {
+                        alert("Silakan login terlebih dahulu.");
+                        window.location.href = "login.html";
+                        return;
+                    }
+
+                    const product = {
+                        name: "Novel 'Langit Senja'",
+                        price: 55000,
+                        condition: "Layak"
+                    };
+
+                    localStorage.setItem("checkoutProduct", JSON.stringify(product));
+                    window.location.href = "checkout.html";
+                }
+            </script>
+        </div>
+        <footer>
+            © BerkasLama2025
+        </footer>
+    </div>
+
+</body>
+
+</html>
